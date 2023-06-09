@@ -4,7 +4,7 @@
   "description": "Shareable commitlint config enforcing conventional commits",
   "main": "lib/index.js",
   "module": "es/index.js",
-  "types":  "es/index.d.ts",
+  "types": "es/index.d.ts",
   "files": [
     "es",
     "lib"
@@ -35,6 +35,7 @@
     "@commitlint/utils": "^8.3.6",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
+    "@types/node": "^20.2.5",
     "father": "^4.2.3",
     "husky": "^8.0.0",
     "is-ci": "^3.0.1",

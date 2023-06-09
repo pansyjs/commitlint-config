@@ -2,7 +2,7 @@ import { typeEnum } from './config';
 
 const typeEnumKeys = Object.keys(typeEnum);
 
-const config = {
+module.exports = {
 	parserPreset: 'conventional-changelog-conventionalcommits',
 	rules: {
 		'body-leading-blank': [1, 'always'],
@@ -65,5 +65,3 @@ const config = {
 		},
 	},
 };
-
-export default config;

@@ -8,6 +8,7 @@ package-lock.json
 .dockerignore
 .*.dockerfile
 lib/
+es/
 package.json.lerna_backup
 /*.iml
 tsconfig.tsbuildinfo
