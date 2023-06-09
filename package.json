@@ -1,0 +1,50 @@
+{
+  "name": "@pansy/commitlint-config",
+  "version": "1.0.0",
+  "description": "Shareable commitlint config enforcing conventional commits",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "types":  "es/index.d.ts",
+  "files": [
+    "es",
+    "lib"
+  ],
+  "scripts": {
+    "build": "father build",
+    "commit": "commit",
+    "prepare": "is-ci || husky install"
+  },
+  "keywords": [
+    "conventional-changelog",
+    "commitlint",
+    "commitlint-config",
+    "pansy"
+  ],
+  "author": "wangxingkang <wang_xingkang@qq.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pansyjs/commitlint-config.git"
+  },
+  "dependencies": {
+    "conventional-changelog-conventionalcommits": "^5.0.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.5",
+    "@commitlint/prompt-cli": "^17.6.5",
+    "@commitlint/utils": "^8.3.6",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "father": "^4.2.3",
+    "husky": "^8.0.0",
+    "is-ci": "^3.0.1",
+    "semantic-release": "^21.0.3",
+    "typescript": "^5.1.3"
+  },
+  "engines": {
+    "node": ">=v14"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
