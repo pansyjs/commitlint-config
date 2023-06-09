@@ -13,6 +13,9 @@ Shareable commitlint config enforcing conventional commits
 $ pnpm i -D @commitlint/cli @commitlint/prompt-cli @pansy/commitlint-config
 ```
 
+
+
+
 ## 🔨 使用
 
 ```ts
