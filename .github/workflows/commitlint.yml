@@ -5,19 +5,25 @@ on: [push, pull_request]
 jobs:
   commitlint:
     runs-on: ubuntu-22.04
+    container:
+      image: 'ubuntu:22.04'
     steps:
+      - name: Install required dependencies
+        run: |
+          apt update
+          apt install --yes sudo
+          sudo apt install --yes git
+          sudo apt install --yes curl
+          curl --location https://deb.nodesource.com/setup_16.x | sudo --preserve-env bash -
+          sudo DEBIAN_FRONTEND=noninteractive apt install --yes nodejs
+
       - name: 'Checkout'
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
-      - name: Install required dependencies
-        run: |
-          apt update
-          apt install -y sudo
-          sudo apt install -y git curl
-          curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-          sudo DEBIAN_FRONTEND=noninteractive apt install -y nodejs
+      - name: ownership workaround
+        run: git config --global --add safe.directory '*'
 
       - name: Cache pnpm modules
         uses: actions/cache@v2
