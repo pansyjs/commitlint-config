@@ -11,13 +11,13 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Install required dependencies
-        run: |
-          apt update
-          apt install -y sudo
-          sudo apt install -y git curl
-          curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-          sudo DEBIAN_FRONTEND=noninteractive apt install -y nodejs
+      # - name: Install required dependencies
+      #   run: |
+      #     apt update
+      #     apt install -y sudo
+      #     sudo apt install -y git curl
+      #     curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+      #     sudo DEBIAN_FRONTEND=noninteractive apt install -y nodejs
 
       - name: Cache pnpm modules
         uses: actions/cache@v2
