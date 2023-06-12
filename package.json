@@ -2,6 +2,18 @@
   "name": "@pansy/commitlint-config",
   "version": "1.0.0",
   "description": "Shareable commitlint config enforcing conventional commits",
+  "keywords": [
+    "conventional-changelog",
+    "commitlint",
+    "commitlint-config",
+    "pansy"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pansyjs/commitlint-config.git"
+  },
+  "license": "MIT",
+  "author": "wangxingkang <wang_xingkang@qq.com>",
   "main": "lib/index.js",
   "module": "es/index.js",
   "types": "es/index.d.ts",
@@ -14,17 +26,13 @@
     "commit": "commit",
     "prepare": "is-ci || husky install"
   },
-  "keywords": [
-    "conventional-changelog",
-    "commitlint",
-    "commitlint-config",
-    "pansy"
-  ],
-  "author": "wangxingkang <wang_xingkang@qq.com>",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/pansyjs/commitlint-config.git"
+  "lint-staged": {
+    "*.{jsx,less,md,json}": [
+      "prettier --no-error-on-unmatched-pattern --cache --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --no-error-on-unmatched-pattern --cache --parser=typescript --write"
+    ]
   },
   "dependencies": {
     "conventional-changelog-conventionalcommits": "^5.0.0"
@@ -39,6 +47,9 @@
     "father": "^4.2.3",
     "husky": "^8.0.0",
     "is-ci": "^3.0.1",
+    "lint-staged": "^13.2.2",
+    "prettier": "^2.8.8",
+    "prettier-plugin-packagejson": "^2.4.3",
     "semantic-release": "^21.0.3",
     "typescript": "^5.1.3"
   },
